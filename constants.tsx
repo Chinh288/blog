@@ -74,13 +74,6 @@ export const MOCK_PROJECTS: Project[] = [
     description: 'Xây dựng hệ thống web phát hiện steganography sử dụng Deep Learning.',
     technologies: ['Python', 'TensorFlow', 'CNN', 'Flask', 'React'],
     content: `Phát triển mô hình CNN để phát hiện thông tin ẩn trong ảnh (steganography). Xây dựng website cho phép người dùng kiểm tra ảnh trước khi tải về, cảnh báo nếu phát hiện dữ liệu ẩn đáng ngờ. Hệ thống sử dụng transfer learning và đạt độ chính xác 92% trên tập test.`
-  },
-  {
-    id: 'wazuh-automation',
-    title: 'Tự động hóa phát hiện sự cố với Wazuh',
-    description: 'Xây dựng pipeline từ thu thập log đến phản ứng tự động.',
-    technologies: ['Wazuh', 'Shuffle', 'Docker'],
-    content: `Triển khai hệ thống SIEM/SOAR tập trung. Sử dụng Shuffle để tự động hoá việc chặn IP trên firewall sau khi Wazuh phát hiện tấn công brute-force.`
   }
 ];
 
