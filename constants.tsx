@@ -64,26 +64,17 @@ export const MOCK_ACTIVITIES: Activity[] = [
 ### 4.2 Các chủ đề nâng cao: Multicast UDP và Java RMI
 * Multicast UDP: Unicast/Broadcast/Multicast, MulticastSocket, joinGroup.
 * Java RMI: Gọi phương thức từ xa, RMI Registry, Stub/Skeleton.`
-  },
-  {
-    id: '2024-05-15-pcap-analysis',
-    date: '2024-05-15',
-    title: 'Phân tích PCAP lưu lượng độc hại Cobalt Strike',
-    tags: [Tag.LAB],
-    level: SkillLevel.INTERMEDIATE,
-    images: ['https://picsum.photos/seed/cyber1/1200/800'],
-    content: `### What I did
-Phân tích beaconing traffic của Cobalt Strike. Trích xuất metadata từ HTTP cookie header và xác định chu kỳ heartbeat.
-
-### What I learned
-Nhận diện cấu trúc default URI và pattern của các request tự động từ C2 framework.
-
-### Next step
-Cấu hình Suricata rule phát hiện beaconing dựa trên content size.`
   }
 ];
 
 export const MOCK_PROJECTS: Project[] = [
+  {
+    id: 'steganography-detection',
+    title: 'Phát hiện tin ẩn trong ảnh bằng CNN',
+    description: 'Xây dựng hệ thống web phát hiện steganography sử dụng Deep Learning.',
+    technologies: ['Python', 'TensorFlow', 'CNN', 'Flask', 'React'],
+    content: `Phát triển mô hình CNN để phát hiện thông tin ẩn trong ảnh (steganography). Xây dựng website cho phép người dùng kiểm tra ảnh trước khi tải về, cảnh báo nếu phát hiện dữ liệu ẩn đáng ngờ. Hệ thống sử dụng transfer learning và đạt độ chính xác 92% trên tập test.`
+  },
   {
     id: 'wazuh-automation',
     title: 'Tự động hóa phát hiện sự cố với Wazuh',
