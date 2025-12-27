@@ -32,7 +32,10 @@ const App: React.FC = () => {
             <div className="absolute inset-0 rounded-full ring-2 ring-zinc-900/10 pointer-events-none"></div>
           </div>
         </div>
-        <h1 className="text-5xl font-black tracking-tight text-zinc-900 mb-8">{PROFILE_INFO.fullName}</h1>
+        <h1 className="text-5xl font-black tracking-tight text-zinc-900 mb-2">{PROFILE_INFO.fullName}</h1>
+        <p className="text-sm text-zinc-400 mb-8">
+          MSSV: {PROFILE_INFO.studentId} • {PROFILE_INFO.dateOfBirth} • Lớp {PROFILE_INFO.className}
+        </p>
 
         <div className="flex flex-wrap gap-x-12 gap-y-6 text-sm mb-10">
           <div className="space-y-1.5">

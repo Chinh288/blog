@@ -3,6 +3,9 @@ import { Tag, SkillLevel, Activity, Project, Certification } from './types';
 
 export const PROFILE_INFO = {
   fullName: "Đinh Duy Chính",
+  studentId: "2280600311",
+  dateOfBirth: "28/08/2004",
+  className: "22DTHE5",
   school: "Hutech University",
   field: "An toàn thông tin / An ninh mạng",
   focus: "SOC / Blue Team / Network Security",
