@@ -6,6 +6,8 @@ export const PROFILE_INFO = {
   studentId: "2280600311",
   dateOfBirth: "28/08/2004",
   className: "22DTHE5",
+  email: "duychinhdinh@gmail.com",
+  github: "https://github.com/Chinh288",
   school: "Hutech University",
   field: "An toàn thông tin / An ninh mạng",
   focus: "SOC / Blue Team / Network Security",

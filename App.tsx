@@ -52,9 +52,19 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        <p className="text-lg text-zinc-500 max-w-2xl leading-relaxed italic">
+        <p className="text-lg text-zinc-500 max-w-2xl leading-relaxed italic mb-6">
           {PROFILE_INFO.bio}
         </p>
+
+        <div className="flex gap-4 text-sm">
+          <a href={`mailto:${PROFILE_INFO.email}`} className="text-zinc-600 hover:text-zinc-900 transition-colors">
+            📧 {PROFILE_INFO.email}
+          </a>
+          <span className="text-zinc-300">•</span>
+          <a href={PROFILE_INFO.github} target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-zinc-900 transition-colors">
+            🔗 GitHub
+          </a>
+        </div>
       </header>
 
       {/* Primary Navigation */}
