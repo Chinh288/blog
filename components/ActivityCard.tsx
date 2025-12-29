@@ -111,13 +111,12 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
               </p>
             );
           })}
-        </div>
 
-        {activity.images && activity.images.length > 0 && (
-          <div className="mt-12 rounded-xl overflow-hidden border border-zinc-100 shadow-sm">
-            <ImageGallery images={activity.images} />
-          </div>
-        )}
+          {activity.images && activity.images.length > 0 && (
+            <div className="mt-12 rounded-xl overflow-hidden border border-zinc-100 shadow-sm">
+              <ImageGallery images={activity.images} />
+            </div>
+          )}
         </div>
         )}
       </div>
