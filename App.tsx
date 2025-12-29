@@ -84,7 +84,7 @@ const App: React.FC = () => {
       <main className="min-h-[60vh]">
         {activeTab === 'activities' && (
           <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
-            <div className="space-y-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {MOCK_ACTIVITIES.map(activity => (
                 <ActivityCard key={activity.id} activity={activity} />
               ))}
