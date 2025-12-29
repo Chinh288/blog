@@ -17,60 +17,37 @@ export const PROFILE_INFO = {
 
 export const MOCK_ACTIVITIES: Activity[] = [
   {
-    id: '2025-12-29-system-hacking-deep-dive',
+    id: '2025-12-29-system-hacking',
     date: '2025-12-29',
-    title: 'System Hacking - Tổng hợp kỹ thuật tấn công và phòng thủ',
-    tags: [Tag.READING, Tag.LAB],
+    title: 'System Hacking - Leo thang đặc quyền và Post-Exploitation',
+    tags: [Tag.LAB],
     level: SkillLevel.ADVANCED,
-    images: ['https://picsum.photos/seed/syshack/1200/800'],
+    images: ['https://picsum.photos/seed/privesc1/1200/800'],
     content: 
     `### Những gì đã làm
-Nghiên cứu sâu về System Hacking bao gồm Red Team tactics, các phương thức xác thực Windows (NTLM, Kerberos), kỹ thuật leo thang đặc quyền trên Windows và Linux. Thực hành các kỹ thuật tấn công thực tế như Pass the Hash, Password Spraying, và khai thác lỗi cấu hình hệ thống.
+Thực hành kỹ thuật leo thang đặc quyền trên Linux và Windows. Khai thác các dịch vụ cấu hình sai, SUID binaries, và lỗ hổng kernel để đạt quyền root/SYSTEM.
 
 ### Những gì đã học
-
-#### 1. Red Team Operations
-* **Cyber Attacks**: Sử dụng công nghệ tấn công vào hệ thống máy tính
-* **Social Engineering**: Tấn công yếu tố con người
-* **Physical Security**: Bẻ khóa, phá khóa vật lý (Black Team)
-* **Phương thức tấn công**: OSINT → Truy cập & Thực thi → Leo thang đặc quyền → Lateral Movement → Exfiltration → Domain Takeover
-
-#### 2. Windows Authentication
-* **SAM Database**: Lưu trữ Username, UserID, LM Hash, NTLM Hash
-* **NTLM Authentication**: Giao thức xác thực cũ hơn, dễ bị tấn công Pass the Hash
-* **Kerberos**: Xác thực mạnh hơn với TGT (Ticket Granting Ticket) và TGS (Ticket Granting Service)
-* **Attack Techniques**: Password Spraying, Pass the Hash, Responder Attack
-
-#### 3. Privilege Escalation - Windows
-* **Unquoted Service Paths**: Khai thác đường dẫn dịch vụ không có ngoặc kép
-* **AlwaysInstallElevated**: Lỗi cấu hình Registry cho phép cài đặt MSI với quyền SYSTEM
-* **SeBackupPrivilege**: Sao lưu ntds.dit để dump credentials
-* **Credential Hunting**: Tìm mật khẩu trong Registry, file config, trình duyệt
-* **Tools**: Lazagne, SessionGopher, SharpChrome, lolbas
-
-#### 4. Privilege Escalation - Linux
-* **SUID/SGID Binaries**: Tìm và khai thác các file binary có bit đặc biệt
-* **Sudo Misconfigurations**: Khai thác cấu hình sudo sai (GTFOBins)
-* **Cron Jobs**: Hijack tác vụ định kỳ chạy với quyền root
-* **Kernel Exploits**: DirtyCow, PwnKit cho các lỗ hổng kernel
-* **LXD Container**: Leo thang đặc quyền thông qua container
-* **LD_PRELOAD**: Shared library hijacking
-
-#### 5. Post-Exploitation
-* **Reverse Shell vs Bind Shell**: Hiểu sự khác biệt và khi nào sử dụng
-* **Persistence**: Backdoor, scheduled tasks, registry keys
-* **Credential Dumping**: Mimikatz, /etc/shadow, NTDS.dit
-* **Lateral Movement**: Pass-the-Hash, PSExec, Evil-WinRM
-* **Tools**: Netcat, Metasploit, pspy, Responder
-
-#### 6. Enumeration & Reconnaissance
-* **Network Scanning**: netdiscover, nmap, crackmapexec
-* **Web Scanning**: nikto, dirb, burp suite
-* **Service Enumeration**: SMB, FTP, SSH, HTTP
-* **Information Gathering**: searchsploit, msfconsole
+* Leo thang đặc quyền trên Linux:
+  - Khai thác SUID/SGID binaries (find / -perm -4000)
+  - Lỗi cấu hình sudo (sudo -l, GTFOBins)
+  - Cron jobs và PATH hijacking
+  - Khai thác lỗ hổng kernel (DirtyCow, PwnKit)
+  
+* Leo thang đặc quyền trên Windows:
+  - Unquoted service paths
+  - Weak service permissions (sc qc, accesschk)
+  - Token impersonation (SeImpersonatePrivilege)
+  - Kỹ thuật bypass UAC
+  
+* Post-Exploitation:
+  - Cơ chế duy trì truy cập (backdoors, scheduled tasks)
+  - Trích xuất thông tin đăng nhập (mimikatz, /etc/shadow)
+  - Di chuyển ngang (Pass-the-Hash, PSExec)
+  - Xóa log và chống điều tra số
 
 ### Bước tiếp theo
-Thực hành trên các lab môi trường thực tế (HackTheBox, TryHackMe). Nghiên cứu sâu về Active Directory exploitation và Domain Takeover. Tham gia các scenario Red Team/Blue Team để hiểu cả hai góc độ tấn công và phòng thủ.`
+Nghiên cứu về khai thác Active Directory và leo thang đặc quyền domain. Thực hành trên HackTheBox và TryHackMe machines.`
   },
   {
     id: '2025-06-20-hutech-attt-competition',
@@ -111,39 +88,6 @@ Tham gia cuộc thi Capture The Flag do Câu lạc bộ An toàn thông tin HUTE
 
 ### Bước tiếp theo
 Luyện tập thường xuyên trên các platform CTF online. Tham gia nhiều giải đấu hơn để tích lũy kinh nghiệm.`
-  },
-  {
-    id: '2025-12-29-system-hacking',
-    date: '2025-12-29',
-    title: 'System Hacking - Leo thang đặc quyền và Post-Exploitation',
-    tags: [Tag.LAB],
-    level: SkillLevel.ADVANCED,
-    images: ['https://picsum.photos/seed/privesc1/1200/800'],
-    content: 
-    `### Những gì đã làm
-Thực hành kỹ thuật leo thang đặc quyền trên Linux và Windows. Khai thác các dịch vụ cấu hình sai, SUID binaries, và lỗ hổng kernel để đạt quyền root/SYSTEM.
-
-### Những gì đã học
-* Leo thang đặc quyền trên Linux:
-  - Khai thác SUID/SGID binaries (find / -perm -4000)
-  - Lỗi cấu hình sudo (sudo -l, GTFOBins)
-  - Cron jobs và PATH hijacking
-  - Khai thác lỗ hổng kernel (DirtyCow, PwnKit)
-  
-* Leo thang đặc quyền trên Windows:
-  - Unquoted service paths
-  - Weak service permissions (sc qc, accesschk)
-  - Token impersonation (SeImpersonatePrivilege)
-  - Kỹ thuật bypass UAC
-  
-* Post-Exploitation:
-  - Cơ chế duy trì truy cập (backdoors, scheduled tasks)
-  - Trích xuất thông tin đăng nhập (mimikatz, /etc/shadow)
-  - Di chuyển ngang (Pass-the-Hash, PSExec)
-  - Xóa log và chống điều tra số
-
-### Bước tiếp theo
-Nghiên cứu về khai thác Active Directory và leo thang đặc quyền domain. Thực hành trên HackTheBox và TryHackMe machines.`
   },
   {
     id: '2025-12-28-cryptography-basics',
