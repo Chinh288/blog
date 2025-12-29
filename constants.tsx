@@ -17,6 +17,39 @@ export const PROFILE_INFO = {
 
 export const MOCK_ACTIVITIES: Activity[] = [
   {
+    id: '2025-12-29-system-hacking',
+    date: '2025-12-29',
+    title: 'System Hacking - Leo thang đặc quyền và Post-Exploitation',
+    tags: [Tag.LAB],
+    level: SkillLevel.ADVANCED,
+    images: ['https://picsum.photos/seed/privesc1/1200/800'],
+    content: 
+    `### What I did
+Thực hành kỹ thuật leo thang đặc quyền trên Linux và Windows. Exploit misconfigured services, SUID binaries, và kernel vulnerabilities để gain root/SYSTEM access.
+
+### What I learned
+* Linux Privilege Escalation:
+  - SUID/SGID binaries exploitation (find / -perm -4000)
+  - Sudo misconfigurations (sudo -l, GTFOBins)
+  - Cron jobs và PATH hijacking
+  - Kernel exploits (DirtyCow, PwnKit)
+  
+* Windows Privilege Escalation:
+  - Unquoted service paths
+  - Weak service permissions (sc qc, accesschk)
+  - Token impersonation (SeImpersonatePrivilege)
+  - UAC bypass techniques
+  
+* Post-Exploitation:
+  - Persistence mechanisms (backdoors, scheduled tasks)
+  - Credential dumping (mimikatz, /etc/shadow)
+  - Lateral movement (Pass-the-Hash, PSExec)
+  - Log cleaning và anti-forensics
+
+### Next step
+Nghiên cứu về Active Directory exploitation và domain privilege escalation. Thực hành trên HackTheBox và TryHackMe machines.`
+  },
+  {
     id: '2025-12-28-cryptography-basics',
     date: '2025-12-28',
     title: 'Mã hóa hiện đại và ứng dụng Cryptography',
