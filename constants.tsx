@@ -24,30 +24,30 @@ export const MOCK_ACTIVITIES: Activity[] = [
     level: SkillLevel.ADVANCED,
     images: ['https://picsum.photos/seed/privesc1/1200/800'],
     content: 
-    `### What I did
-Thực hành kỹ thuật leo thang đặc quyền trên Linux và Windows. Exploit misconfigured services, SUID binaries, và kernel vulnerabilities để gain root/SYSTEM access.
+    `### Những gì đã làm
+Thực hành kỹ thuật leo thang đặc quyền trên Linux và Windows. Khai thác các dịch vụ cấu hình sai, SUID binaries, và lỗ hổng kernel để đạt quyền root/SYSTEM.
 
-### What I learned
-* Linux Privilege Escalation:
-  - SUID/SGID binaries exploitation (find / -perm -4000)
-  - Sudo misconfigurations (sudo -l, GTFOBins)
+### Những gì đã học
+* Leo thang đặc quyền trên Linux:
+  - Khai thác SUID/SGID binaries (find / -perm -4000)
+  - Lỗi cấu hình sudo (sudo -l, GTFOBins)
   - Cron jobs và PATH hijacking
-  - Kernel exploits (DirtyCow, PwnKit)
+  - Khai thác lỗ hổng kernel (DirtyCow, PwnKit)
   
-* Windows Privilege Escalation:
+* Leo thang đặc quyền trên Windows:
   - Unquoted service paths
   - Weak service permissions (sc qc, accesschk)
   - Token impersonation (SeImpersonatePrivilege)
-  - UAC bypass techniques
+  - Kỹ thuật bypass UAC
   
 * Post-Exploitation:
-  - Persistence mechanisms (backdoors, scheduled tasks)
-  - Credential dumping (mimikatz, /etc/shadow)
-  - Lateral movement (Pass-the-Hash, PSExec)
-  - Log cleaning và anti-forensics
+  - Cơ chế duy trì truy cập (backdoors, scheduled tasks)
+  - Trích xuất thông tin đăng nhập (mimikatz, /etc/shadow)
+  - Di chuyển ngang (Pass-the-Hash, PSExec)
+  - Xóa log và chống điều tra số
 
-### Next step
-Nghiên cứu về Active Directory exploitation và domain privilege escalation. Thực hành trên HackTheBox và TryHackMe machines.`
+### Bước tiếp theo
+Nghiên cứu về khai thác Active Directory và leo thang đặc quyền domain. Thực hành trên HackTheBox và TryHackMe machines.`
   },
   {
     id: '2025-12-28-cryptography-basics',
@@ -57,17 +57,17 @@ Nghiên cứu về Active Directory exploitation và domain privilege escalation
     level: SkillLevel.INTERMEDIATE,
     images: ['https://picsum.photos/seed/crypto1/1200/800'],
     content: 
-    `### What I did
-Nghiên cứu và thực hành các thuật toán mã hóa: AES-256, RSA, SHA-256. Thực hiện bài lab mã hóa end-to-end communication sử dụng Python cryptography library.
+    `### Những gì đã làm
+Nghiên cứu và thực hành các thuật toán mã hóa: AES-256, RSA, SHA-256. Thực hiện bài lab mã hóa end-to-end communication sử dụng thư viện Python cryptography.
 
-### What I learned
-* Symmetric vs Asymmetric encryption: Use cases và performance trade-offs
-* Hash functions: SHA-256, HMAC cho data integrity
-* Digital signatures: RSA signing và verification
-* Key management: Best practices trong production environment
+### Những gì đã học
+* So sánh mã hóa đối xứng và bất đối xứng: Các trường hợp sử dụng và đánh đổi hiệu suất
+* Hàm băm: SHA-256, HMAC để đảm bảo tính toàn vẹn dữ liệu
+* Chữ ký số: Ký và xác minh RSA
+* Quản lý khóa: Thực hành tốt nhất trong môi trường production
 
-### Next step
-Tìm hiểu về PKI (Public Key Infrastructure) và certificate management. Thực hành break weak encryption trong CTF challenges.`
+### Bước tiếp theo
+Tìm hiểu về PKI (Public Key Infrastructure) và quản lý chứng chỉ. Thực hành phá mã hóa yếu trong các thử thách CTF.`
   },
   {
     id: '2025-12-27-digital-forensics',
@@ -77,17 +77,17 @@ Tìm hiểu về PKI (Public Key Infrastructure) và certificate management. Th�
     level: SkillLevel.INTERMEDIATE,
     images: ['https://picsum.photos/seed/forensic1/1200/800'],
     content: 
-    `### What I did
-Phân tích memory dump sử dụng Volatility framework. Trích xuất artifacts từ disk image với Autopsy để điều tra incident.
+    `### Những gì đã làm
+Phân tích memory dump sử dụng Volatility framework. Trích xuất artifacts từ disk image với Autopsy để điều tra sự cố.
 
-### What I learned
-* Memory forensics: Process analysis, network connections, malware detection
-* File system artifacts: Browser history, deleted files recovery, timeline analysis
-* Log analysis: Windows Event Logs, Linux syslogs correlation
-* Chain of custody: Evidence handling best practices
+### Những gì đã học
+* Điều tra bộ nhớ: Phân tích tiến trình, kết nối mạng, phát hiện malware
+* Artifacts hệ thống file: Lịch sử trình duyệt, khôi phục file đã xóa, phân tích timeline
+* Phân tích log: Windows Event Logs, tương quan Linux syslogs
+* Chuỗi bảo quản: Thực hành tốt nhất trong xử lý bằng chứng
 
-### Next step
-Học thêm về mobile forensics (Android/iOS). Thực hành network forensics với Wireshark và NetworkMiner.`
+### Bước tiếp theo
+Học thêm về điều tra thiết bị di động (Android/iOS). Thực hành điều tra mạng với Wireshark và NetworkMiner.`
   },
   {
     id: '2025-12-26-binary-exploitation',
@@ -97,17 +97,17 @@ Học thêm về mobile forensics (Android/iOS). Thực hành network forensics 
     level: SkillLevel.ADVANCED,
     images: ['https://picsum.photos/seed/pwn1/1200/800'],
     content: 
-    `### What I did
-Thực hành khai thác lỗi buffer overflow trong C program. Sử dụng GDB và pwntools để craft payload và bypass stack protection.
+    `### Những gì đã làm
+Thực hành khai thác lỗi buffer overflow trong chương trình C. Sử dụng GDB và pwntools để tạo payload và vượt qua bảo vệ stack.
 
-### What I learned
-* Stack layout: EBP, ESP, return address manipulation
-* Shellcode development: Writing và injecting x86 assembly
-* Protection mechanisms: DEP, ASLR, Stack Canaries và bypass techniques
-* Return-Oriented Programming (ROP): Building ROP chains
+### Những gì đã học
+* Cấu trúc Stack: Thao tác EBP, ESP, return address
+* Phát triển Shellcode: Viết và inject mã assembly x86
+* Cơ chế bảo vệ: DEP, ASLR, Stack Canaries và kỹ thuật vượt qua
+* Return-Oriented Programming (ROP): Xây dựng chuỗi ROP
 
-### Next step
-Nghiên cứu heap exploitation và use-after-free vulnerabilities. Tham gia CTF PWN challenges để thực hành.`
+### Bước tiếp theo
+Nghiên cứu khai thác heap và lỗ hổng use-after-free. Tham gia các thử thách CTF PWN để thực hành.`
   },
   {
     id: '2025-12-25-java-security',
@@ -117,18 +117,18 @@ Nghiên cứu heap exploitation và use-after-free vulnerabilities. Tham gia CTF
     level: SkillLevel.INTERMEDIATE,
     images: ['https://picsum.photos/seed/javasec1/1200/800'],
     content: 
-    `### What I did
-Tìm hiểu về common vulnerabilities trong Java applications: SQL Injection, XXE, Deserialization attacks. Thực hành secure coding với OWASP guidelines.
+    `### Những gì đã làm
+Tìm hiểu về các lỗ hổng phổ biến trong ứng dụng Java: SQL Injection, XXE, tấn công Deserialization. Thực hành lập trình an toàn theo hướng dẫn OWASP.
 
-### What I learned
-* Input validation: Sanitizing user input, prepared statements
-* Authentication & Authorization: Spring Security implementation
-* Secure deserialization: Avoiding ObjectInputStream vulnerabilities
-* Cryptography in Java: JCE framework, SecureRandom usage
-* Dependency scanning: Detecting vulnerable libraries với OWASP Dependency-Check
+### Những gì đã học
+* Xác thực đầu vào: Làm sạch input người dùng, prepared statements
+* Xác thực & Ủy quyền: Triển khai Spring Security
+* Deserialization an toàn: Tránh lỗ hổng ObjectInputStream
+* Mã hóa trong Java: Framework JCE, sử dụng SecureRandom
+* Quét phụ thuộc: Phát hiện thư viện dễ bị tấn công với OWASP Dependency-Check
 
-### Next step
-Deep dive vào Java bytecode analysis và runtime protection mechanisms (SecurityManager).`
+### Bước tiếp theo
+Tìm hiểu sâu về phân tích Java bytecode và cơ chế bảo vệ runtime (SecurityManager).`
   },
   {
     id: '2025-12-24-web-security',
@@ -138,18 +138,18 @@ Deep dive vào Java bytecode analysis và runtime protection mechanisms (Securit
     level: SkillLevel.INTERMEDIATE,
     images: ['https://picsum.photos/seed/websec1/1200/800'],
     content: 
-    `### What I did
-Thực hành tấn công và phòng thủ web applications. Sử dụng Burp Suite để test OWASP Top 10 vulnerabilities trên DVWA và WebGoat.
+    `### Những gì đã làm
+Thực hành tấn công và phòng thủ ứng dụng web. Sử dụng Burp Suite để kiểm tra các lỗ hổng OWASP Top 10 trên DVWA và WebGoat.
 
-### What I learned
-* XSS (Stored, Reflected, DOM-based): Exploitation và mitigation
-* CSRF: Token validation và SameSite cookies
-* SQL Injection: Union-based, Blind SQLi, Time-based attacks
-* Authentication flaws: Session management, password reset vulnerabilities
-* SSRF và XXE: Internal network access và XML parsing attacks
+### Những gì đã học
+* XSS (Stored, Reflected, DOM-based): Khai thác và phòng chống
+* CSRF: Xác thực token và SameSite cookies
+* SQL Injection: Tấn công Union-based, Blind SQLi, Time-based
+* Lỗi xác thực: Quản lý session, lỗ hổng reset mật khẩu
+* SSRF và XXE: Truy cập mạng nội bộ và tấn công phân tích XML
 
-### Next step
-Học về API security testing (REST/GraphQL) và OAuth 2.0 vulnerabilities. Thực hành bug bounty hunting.`
+### Bước tiếp theo
+Học về kiểm tra bảo mật API (REST/GraphQL) và lỗ hổng OAuth 2.0. Thực hành bug bounty hunting.`
   },
   {
     id: '2025-12-20-lap-trinh-mang',
