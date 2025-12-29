@@ -17,6 +17,108 @@ export const PROFILE_INFO = {
 
 export const MOCK_ACTIVITIES: Activity[] = [
   {
+    id: '2025-12-28-cryptography-basics',
+    date: '2025-12-28',
+    title: 'Mã hóa hiện đại và ứng dụng Cryptography',
+    tags: [Tag.READING, Tag.LAB],
+    level: SkillLevel.INTERMEDIATE,
+    images: ['https://picsum.photos/seed/crypto1/1200/800'],
+    content: 
+    `### What I did
+Nghiên cứu và thực hành các thuật toán mã hóa: AES-256, RSA, SHA-256. Thực hiện bài lab mã hóa end-to-end communication sử dụng Python cryptography library.
+
+### What I learned
+* Symmetric vs Asymmetric encryption: Use cases và performance trade-offs
+* Hash functions: SHA-256, HMAC cho data integrity
+* Digital signatures: RSA signing và verification
+* Key management: Best practices trong production environment
+
+### Next step
+Tìm hiểu về PKI (Public Key Infrastructure) và certificate management. Thực hành break weak encryption trong CTF challenges.`
+  },
+  {
+    id: '2025-12-27-digital-forensics',
+    date: '2025-12-27',
+    title: 'Digital Forensics - Phân tích dấu vết tấn công',
+    tags: [Tag.LAB],
+    level: SkillLevel.INTERMEDIATE,
+    images: ['https://picsum.photos/seed/forensic1/1200/800'],
+    content: 
+    `### What I did
+Phân tích memory dump sử dụng Volatility framework. Trích xuất artifacts từ disk image với Autopsy để điều tra incident.
+
+### What I learned
+* Memory forensics: Process analysis, network connections, malware detection
+* File system artifacts: Browser history, deleted files recovery, timeline analysis
+* Log analysis: Windows Event Logs, Linux syslogs correlation
+* Chain of custody: Evidence handling best practices
+
+### Next step
+Học thêm về mobile forensics (Android/iOS). Thực hành network forensics với Wireshark và NetworkMiner.`
+  },
+  {
+    id: '2025-12-26-binary-exploitation',
+    date: '2025-12-26',
+    title: 'PWN - Binary Exploitation và Buffer Overflow',
+    tags: [Tag.LAB],
+    level: SkillLevel.ADVANCED,
+    images: ['https://picsum.photos/seed/pwn1/1200/800'],
+    content: 
+    `### What I did
+Thực hành khai thác lỗi buffer overflow trong C program. Sử dụng GDB và pwntools để craft payload và bypass stack protection.
+
+### What I learned
+* Stack layout: EBP, ESP, return address manipulation
+* Shellcode development: Writing và injecting x86 assembly
+* Protection mechanisms: DEP, ASLR, Stack Canaries và bypass techniques
+* Return-Oriented Programming (ROP): Building ROP chains
+
+### Next step
+Nghiên cứu heap exploitation và use-after-free vulnerabilities. Tham gia CTF PWN challenges để thực hành.`
+  },
+  {
+    id: '2025-12-25-java-security',
+    date: '2025-12-25',
+    title: 'Java Security - Secure Coding Practices',
+    tags: [Tag.READING, Tag.LAB],
+    level: SkillLevel.INTERMEDIATE,
+    images: ['https://picsum.photos/seed/javasec1/1200/800'],
+    content: 
+    `### What I did
+Tìm hiểu về common vulnerabilities trong Java applications: SQL Injection, XXE, Deserialization attacks. Thực hành secure coding với OWASP guidelines.
+
+### What I learned
+* Input validation: Sanitizing user input, prepared statements
+* Authentication & Authorization: Spring Security implementation
+* Secure deserialization: Avoiding ObjectInputStream vulnerabilities
+* Cryptography in Java: JCE framework, SecureRandom usage
+* Dependency scanning: Detecting vulnerable libraries với OWASP Dependency-Check
+
+### Next step
+Deep dive vào Java bytecode analysis và runtime protection mechanisms (SecurityManager).`
+  },
+  {
+    id: '2025-12-24-web-security',
+    date: '2025-12-24',
+    title: 'Web Application Security Testing',
+    tags: [Tag.LAB],
+    level: SkillLevel.INTERMEDIATE,
+    images: ['https://picsum.photos/seed/websec1/1200/800'],
+    content: 
+    `### What I did
+Thực hành tấn công và phòng thủ web applications. Sử dụng Burp Suite để test OWASP Top 10 vulnerabilities trên DVWA và WebGoat.
+
+### What I learned
+* XSS (Stored, Reflected, DOM-based): Exploitation và mitigation
+* CSRF: Token validation và SameSite cookies
+* SQL Injection: Union-based, Blind SQLi, Time-based attacks
+* Authentication flaws: Session management, password reset vulnerabilities
+* SSRF và XXE: Internal network access và XML parsing attacks
+
+### Next step
+Học về API security testing (REST/GraphQL) và OAuth 2.0 vulnerabilities. Thực hành bug bounty hunting.`
+  },
+  {
     id: '2025-12-20-lap-trinh-mang',
     date: '2025-12-20',
     title: 'Lập Trình Mạng',
