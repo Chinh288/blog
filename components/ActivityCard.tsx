@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Activity, SkillLevel } from '../types';
 import ImageGallery from './ImageGallery';
 
@@ -8,6 +8,8 @@ interface ActivityCardProps {
 }
 
 const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const getLevelStyles = (level: SkillLevel) => {
     switch (level) {
       case SkillLevel.BASIC: return 'text-blue-600 border-blue-100 bg-blue-50/50';
@@ -48,11 +50,22 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
 
       {/* Main Content */}
       <div className="md:col-span-9 pl-0 md:pl-8 md:border-l border-zinc-100">
-        <h3 className="text-2xl font-bold text-zinc-900 mb-8 leading-snug group-hover:text-black transition-colors">
-          {activity.title}
-        </h3>
+        <div 
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="cursor-pointer hover:bg-zinc-50/50 -mx-4 px-4 py-2 rounded-lg transition-colors"
+        >
+          <div className="flex items-center justify-between">
+            <h3 className="text-2xl font-bold text-zinc-900 leading-snug group-hover:text-black transition-colors">
+              {activity.title}
+            </h3>
+            <span className="text-zinc-400 text-2xl ml-4 flex-shrink-0">
+              {isExpanded ? '−' : '+'}
+            </span>
+          </div>
+        </div>
 
-        <div className="space-y-10">
+        {isExpanded && (
+          <div className="mt-8 space-y-10">
           {activity.content.split('\n\n').map((section, idx) => {
             const isH2 = section.startsWith('## ');
             const isH3 = section.startsWith('### ');
@@ -104,6 +117,8 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
           <div className="mt-12 rounded-xl overflow-hidden border border-zinc-100 shadow-sm">
             <ImageGallery images={activity.images} />
           </div>
+        )}
+        </div>
         )}
       </div>
     </article>
