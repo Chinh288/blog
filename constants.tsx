@@ -20,7 +20,7 @@ export const MOCK_ACTIVITIES: Activity[] = [
     id: '2025-12-29-system-hacking',
     date: '2025-12-29',
     title: 'System Hacking - Leo thang đặc quyền và Post-Exploitation',
-    tags: [Tag.LAB],
+    tags: [Tag.READING],
     level: SkillLevel.ADVANCED,
     images: ['https://picsum.photos/seed/privesc1/1200/800'],
     content: 
@@ -53,7 +53,7 @@ Nghiên cứu về khai thác Active Directory và leo thang đặc quyền doma
     id: '2025-06-20-hutech-attt-competition',
     date: '2025-06-20',
     title: 'Sinh viên với An toàn thông tin HUTECH 2025',
-    tags: [Tag.LAB],
+    tags: [Tag.READING],
     level: SkillLevel.INTERMEDIATE,
     images: ['/images/SVATTTbth.jpg'],
     content: 
@@ -73,7 +73,7 @@ Rút kinh nghiệm và củng cố các điểm yếu đã phát hiện trong qu
     id: '2025-06-06-ctf-maze-of-shadows',
     date: '2025-06-06',
     title: 'Cuộc thi CTF "The Maze of Shadows" - Câu lạc bộ ATTT HUTECH',
-    tags: [Tag.LAB],
+    tags: [Tag.READING],
     level: SkillLevel.INTERMEDIATE,
     images: ['/images/CTFCLB.jpg'],
     content: 
@@ -93,7 +93,7 @@ Luyện tập thường xuyên trên các platform CTF online. Tham gia nhiều 
     id: '2025-12-28-cryptography-basics',
     date: '2025-12-28',
     title: 'Mã hóa hiện đại và ứng dụng Cryptography',
-    tags: [Tag.READING, Tag.LAB],
+    tags: [Tag.READING],
     level: SkillLevel.INTERMEDIATE,
     images: ['https://picsum.photos/seed/crypto1/1200/800'],
     content: 
@@ -113,7 +113,7 @@ Tìm hiểu về PKI (Public Key Infrastructure) và quản lý chứng chỉ. T
     id: '2025-12-27-digital-forensics',
     date: '2025-12-27',
     title: 'Digital Forensics - Phân tích dấu vết tấn công',
-    tags: [Tag.LAB],
+    tags: [Tag.READING],
     level: SkillLevel.INTERMEDIATE,
     images: ['https://picsum.photos/seed/forensic1/1200/800'],
     content: 
@@ -133,7 +133,7 @@ Học thêm về điều tra thiết bị di động (Android/iOS). Thực hành
     id: '2025-12-26-binary-exploitation',
     date: '2025-12-26',
     title: 'PWN - Binary Exploitation và Buffer Overflow',
-    tags: [Tag.LAB],
+    tags: [Tag.READING],
     level: SkillLevel.ADVANCED,
     images: ['https://picsum.photos/seed/pwn1/1200/800'],
     content: 
@@ -153,7 +153,7 @@ Nghiên cứu khai thác heap và lỗ hổng use-after-free. Tham gia các th�
     id: '2025-12-25-java-security',
     date: '2025-12-25',
     title: 'Java Security - Secure Coding Practices',
-    tags: [Tag.READING, Tag.LAB],
+    tags: [Tag.READING],
     level: SkillLevel.INTERMEDIATE,
     images: ['https://picsum.photos/seed/javasec1/1200/800'],
     content: 
@@ -174,7 +174,7 @@ Tìm hiểu sâu về phân tích Java bytecode và cơ chế bảo vệ runtime
     id: '2025-12-24-web-security',
     date: '2025-12-24',
     title: 'Web Application Security Testing',
-    tags: [Tag.LAB],
+    tags: [Tag.READING],
     level: SkillLevel.INTERMEDIATE,
     images: ['https://picsum.photos/seed/websec1/1200/800'],
     content: 
