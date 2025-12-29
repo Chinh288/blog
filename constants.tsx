@@ -17,6 +17,46 @@ export const PROFILE_INFO = {
 
 export const MOCK_ACTIVITIES: Activity[] = [
   {
+    id: '2025-06-20-hutech-attt-competition',
+    date: '2025-06-20',
+    title: 'Sinh viên với An toàn thông tin HUTECH 2025',
+    tags: [Tag.LAB],
+    level: SkillLevel.INTERMEDIATE,
+    images: ['https://picsum.photos/seed/hutech2025/1200/800'],
+    content: 
+    `### Những gì đã làm
+Tham gia cuộc thi "Sinh viên với An toàn thông tin HUTECH 2025" do trường Đại học Công nghệ TP.HCM tổ chức. Thi đấu theo nhóm với các thử thách về Web Security, Cryptography, Network Security và Forensics.
+
+### Những gì đã học
+* Làm việc nhóm: Phân chia nhiệm vụ hiệu quả theo thế mạnh từng thành viên
+* Quản lý thời gian: Ưu tiên các bài có điểm cao và phù hợp với kỹ năng
+* Áp dụng kiến thức: Kết hợp lý thuyết đã học vào giải quyết bài toán thực tế
+* Học hỏi từ đối thủ: Trao đổi kỹ thuật và phương pháp tiếp cận sau cuộc thi
+
+### Bước tiếp theo
+Rút kinh nghiệm và củng cố các điểm yếu đã phát hiện trong quá trình thi. Chuẩn bị tốt hơn cho các cuộc thi tiếp theo.`
+  },
+  {
+    id: '2025-06-06-ctf-maze-of-shadows',
+    date: '2025-06-06',
+    title: 'Cuộc thi CTF "The Maze of Shadows" - Câu lạc bộ ATTT HUTECH',
+    tags: [Tag.LAB],
+    level: SkillLevel.INTERMEDIATE,
+    images: ['https://picsum.photos/seed/ctfmaze/1200/800'],
+    content: 
+    `### Những gì đã làm
+Tham gia cuộc thi Capture The Flag do Câu lạc bộ An toàn thông tin HUTECH tổ chức. Giải các thử thách về Web Exploitation, Binary Exploitation, Reverse Engineering và Cryptography.
+
+### Những gì đã học
+* CTF mindset: Tư duy phân tích đa chiều, không bỏ qua chi tiết nhỏ
+* Tool usage: Thành thạo hơn với Burp Suite, IDA Pro, Ghidra, CyberChef
+* Flag hunting: Kỹ năng tìm kiếm flag ẩn trong source code, metadata, encoding
+* Writeup reading: Học hỏi cách tiếp cận từ các đội khác sau khi kết thúc
+
+### Bước tiếp theo
+Luyện tập thường xuyên trên các platform CTF online. Tham gia nhiều giải đấu hơn để tích lũy kinh nghiệm.`
+  },
+  {
     id: '2025-12-29-system-hacking',
     date: '2025-12-29',
     title: 'System Hacking - Leo thang đặc quyền và Post-Exploitation',
