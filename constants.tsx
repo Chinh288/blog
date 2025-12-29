@@ -22,7 +22,7 @@ export const MOCK_ACTIVITIES: Activity[] = [
     title: 'Sinh viên với An toàn thông tin HUTECH 2025',
     tags: [Tag.LAB],
     level: SkillLevel.INTERMEDIATE,
-    images: ['https://picsum.photos/seed/hutech2025/1200/800'],
+    images: ['/images/SVATTTbth.jpg'],
     content: 
     `### Những gì đã làm
 Tham gia cuộc thi "Sinh viên với An toàn thông tin HUTECH 2025" do trường Đại học Công nghệ TP.HCM tổ chức. Thi đấu theo nhóm với các thử thách về Web Security, Cryptography, Network Security và Forensics.
@@ -42,7 +42,7 @@ Rút kinh nghiệm và củng cố các điểm yếu đã phát hiện trong qu
     title: 'Cuộc thi CTF "The Maze of Shadows" - Câu lạc bộ ATTT HUTECH',
     tags: [Tag.LAB],
     level: SkillLevel.INTERMEDIATE,
-    images: ['https://picsum.photos/seed/ctfmaze/1200/800'],
+    images: ['/images/CTFCLB.jpg'],
     content: 
     `### Những gì đã làm
 Tham gia cuộc thi Capture The Flag do Câu lạc bộ An toàn thông tin HUTECH tổ chức. Giải các thử thách về Web Exploitation, Binary Exploitation, Reverse Engineering và Cryptography.
