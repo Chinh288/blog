@@ -10,7 +10,7 @@ export const PROFILE_INFO = {
   github: "https://github.com/Chinh288",
   school: "Hutech University",
   field: "An toàn thông tin / An ninh mạng",
-  focus: "SOC / Blue Team / Network Security",
+  focus: "Bảo mật hệ thống",
   bio: "Bản ghi quá trình học tập thực tế và bằng chứng kỹ thuật. Chuyên sâu về phân tích log và giám sát an ninh mạng.",
   tools: ["Wireshark", "Suricata", "Wazuh", "Linux", "Nmap", "Burp Suite"]
 };
