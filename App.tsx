@@ -154,7 +154,7 @@ const App: React.FC = () => {
       <footer className="mt-60 mb-24 py-12 border-t border-zinc-100 flex flex-col items-center">
         <div className="w-8 h-1 bg-zinc-900 mb-8" />
         <p className="text-[10px] font-black text-zinc-400 uppercase tracking-[0.5em] text-center">
-          Evidence-Based Technical Portfolio
+          Code của bạn bị lỗi là niềm vui của tôi
         </p>
         <p className="text-[9px] text-zinc-300 uppercase tracking-widest mt-4">
           All records verified by technical logs
