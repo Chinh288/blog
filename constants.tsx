@@ -254,6 +254,27 @@ export const MOCK_PROJECTS: Project[] = [
     description: 'Xây dựng hệ thống web phát hiện steganography sử dụng Deep Learning.',
     technologies: ['Python', 'TensorFlow', 'CNN', 'Flask', 'React'],
     content: `Phát triển mô hình CNN để phát hiện thông tin ẩn trong ảnh (steganography). Xây dựng website cho phép người dùng kiểm tra ảnh trước khi tải về, cảnh báo nếu phát hiện dữ liệu ẩn đáng ngờ. Hệ thống sử dụng transfer learning và đạt độ chính xác 92% trên tập test.`
+  },
+  {
+    id: 'integer-overflow-analysis',
+    title: 'Phân tích và khai thác lỗ hổng Integer Overflow',
+    description: 'Nghiên cứu và demo các kỹ thuật khai thác lỗ hổng tràn số nguyên.',
+    technologies: ['C', 'GDB', 'Python', 'Assembly'],
+    content: `Phân tích chi tiết cơ chế lỗ hổng integer overflow trong các ứng dụng C/C++. Xây dựng các proof-of-concept để demo cách khai thác: overflow trong phép nhân/cộng, bypass kiểm tra kích thước buffer, và leo thang đặc quyền. Tạo tool tự động phát hiện các đoạn code dễ bị tấn công integer overflow.`
+  },
+  {
+    id: 'sql-injection-research',
+    title: 'Nghiên cứu và phân tích lỗ hổng SQL Injection',
+    description: 'Phân tích sâu các kỹ thuật SQL Injection và phương pháp phòng chống.',
+    technologies: ['SQL', 'Python', 'Burp Suite', 'SQLMap'],
+    content: `Nghiên cứu toàn diện về SQL Injection: Union-based, Boolean-based blind, Time-based blind, và Error-based SQLi. Phân tích bypasses cho WAF, filter evasion techniques. Xây dựng lab môi trường vulnerable để thực hành và demo các kỹ thuật tấn công. Đề xuất best practices cho secure coding và sử dụng prepared statements.`
+  },
+  {
+    id: 'web-vulnerability-exploitation',
+    title: 'Khai thác lỗ hổng bảo mật trên ứng dụng Web',
+    description: 'Pentesting và khai thác lỗ hổng trên các trang web thực tế.',
+    technologies: ['Burp Suite', 'OWASP ZAP', 'Metasploit', 'Python'],
+    content: `Thực hiện penetration testing trên các ứng dụng web vulnerable (DVWA, WebGoat, bWAPP). Khai thác đa dạng lỗ hổng: XSS, CSRF, SSRF, XXE, File Upload, Path Traversal, Command Injection. Viết exploit scripts và tự động hóa quá trình khai thác. Lập báo cáo chi tiết về các lỗ hổng phát hiện và đề xuất giải pháp khắc phục.`
   }
 ];
 
