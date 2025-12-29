@@ -42,3 +42,13 @@ export interface Certification {
   content: string;
   images?: string[];
 }
+
+export interface BlogPost {
+  id: string;
+  date: string;
+  title: string;
+  tags: Tag[];
+  level: SkillLevel;
+  content: string;
+  images?: string[];
+}

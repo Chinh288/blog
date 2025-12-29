@@ -4,13 +4,15 @@ import {
   MOCK_ACTIVITIES,
   MOCK_PROJECTS,
   MOCK_CERTIFICATIONS,
+  MOCK_BLOGS,
   PROFILE_INFO
 } from './constants';
 import ActivityCard from './components/ActivityCard';
+import BlogCard from './components/BlogCard';
 import GeminiAnalyst from './components/GeminiAnalyst';
 import ImageGallery from './components/ImageGallery';
 
-type Tab = 'activities' | 'projects' | 'certifications';
+type Tab = 'activities' | 'blog' | 'projects' | 'certifications';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<Tab>('activities');
@@ -69,13 +71,13 @@ const App: React.FC = () => {
 
       {/* Primary Navigation */}
       <nav className="sticky top-0 z-40 bg-white/80 backdrop-blur-md flex gap-10 mb-24 border-b border-zinc-50">
-        {(['activities', 'projects', 'certifications'] as Tab[]).map((tab) => (
+        {(['activities', 'blog', 'projects', 'certifications'] as Tab[]).map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`nav-link h-16 flex items-center text-[10px] font-black uppercase tracking-[0.2em] ${activeTab === tab ? 'active' : 'text-zinc-400 hover:text-zinc-600'}`}
           >
-            {tab === 'activities' ? 'Nhật ký' : tab === 'projects' ? 'Dự án' : 'Chứng chỉ'}
+            {tab === 'activities' ? 'Nhật ký' : tab === 'blog' ? 'Blog' : tab === 'projects' ? 'Dự án' : 'Chứng chỉ'}
           </button>
         ))}
       </nav>
@@ -93,6 +95,14 @@ const App: React.FC = () => {
             <div className="mt-20">
               <GeminiAnalyst logContent="[Sample SOC Log Content for analysis]" />
             </div>
+          </div>
+        )}
+
+        {activeTab === 'blog' && (
+          <div className="animate-in fade-in slide-in-from-bottom-2 duration-500 space-y-4">
+            {MOCK_BLOGS.map(blog => (
+              <BlogCard key={blog.id} blog={blog} />
+            ))}
           </div>
         )}
 

