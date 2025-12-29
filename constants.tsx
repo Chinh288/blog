@@ -11,7 +11,7 @@ export const PROFILE_INFO = {
   school: "Hutech University",
   field: "An toàn thông tin / An ninh mạng",
   focus: "Bảo mật hệ thống",
-  bio: "Bản ghi quá trình học tập thực tế và bằng chứng kỹ thuật. Chuyên sâu về phân tích log và giám sát an ninh mạng.",
+  bio: "Sống và làm việc theo tấm gương đạo đức Hồ Chí Minh",
   tools: ["Wireshark", "Suricata", "Wazuh", "Linux", "Nmap", "Burp Suite"]
 };
 
